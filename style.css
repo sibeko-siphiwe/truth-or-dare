@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+}
+* h1,h2,h3,h4,h5,h6,p,label{
+    pointer-events: none;
+}
+
+body{ 
+    background: linear-gradient(to top, rgb(0, 0, 94),rgb(64, 64, 255));
+}
+
+.Container{
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    font-family: Castellar;
+    font-size: 0.5cm;
+    text-shadow: 0 0 5px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Loader{
+    margin: 20px 0;
+    height: 35px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.filler{
+    animation: loading 7s ;
+}
+
+
+@keyframes loading{
+    from{
+        height: 35px;
+        background-color: red;
+        transform: translateX(-100%);
+    }
+    to{
+        height: 35px;
+        background-color: rgb(9, 255, 0);
+        transform: translateX(0%);
+    }
+}
+
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 40px 0;
+    height: max-content;
+    align-items: center;
+}
+.wrapper .AgeBox{
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 0 5px white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgb(196, 196, 196);
+}
+.AgeBox:hover{
+    box-shadow: 0 0 15px white;
+    cursor: pointer;
+}
+
+footer{
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+}
